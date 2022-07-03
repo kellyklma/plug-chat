@@ -2,7 +2,7 @@
 const http = require("http"),
     fs = require("fs");
 
-const port = 3456;
+const port = process.env.PORT || 3456;
 const file = "chat_client.html";
 // Listen for HTTP connections.  This is essentially a miniature static file server that only serves our one file, chat_client.html, on port 3456:
 const server = http.createServer(function (req, res) {
